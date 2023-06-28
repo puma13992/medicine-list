@@ -1,6 +1,7 @@
 import gspread
 from google.oauth2.service_account import Credentials
 import random
+from datetime import date
 import time
 import sys
 
@@ -195,6 +196,96 @@ def show_list(patient_id):
             print("Invalid choice. Please enter a valid option.\n")
             time.sleep(1)
             continue
+
+
+def add_medication(patient_id):
+    """
+    Function to add medication
+    """
+    worksheet = SPREADSHEET.worksheet(patient_id)
+    data = worksheet.get_all_values()
+
+    # Find the first empty row
+    empty_row = len(data) + 1
+
+    while True:
+        # Ask for medication details
+        name = input("Name of the medication: \n")
+        form = input("Form of the medication \
+(e.g. tablet, inhaler, dragee): \n")
+        strength = input("Strength of the medication: \n")
+        dosage = input("Dosage of the medication \
+(e.g. 1x per day, if necessary): \n")
+        for_what = input("What is the medicine used for: \n")
+        when = input("When you take the medication \
+(e.g. evening, if necessary): \n")
+        start_date = input("Start Date: \n")
+        stop_date = input("Stop Date (can be empty): \n")
+        special_instructions = input("Special instructions (can be empty): \n")
+
+        # Validate input
+        if not (name.strip() and form.strip()
+                and for_what.strip() and when.strip() and start_date.strip()):
+            print("Invalid input. All fields must be filled. "
+                  "Only 'Stop Date' and 'Special instructions' "
+                  "can be empty.\n")
+            time.sleep(1)
+            continue
+
+        # Confirm the medication details
+        print("Please confirm the medication details: \n")
+        print(f"Name: {name}")
+        print(f"Form: {form}")
+        print(f"Strength: {strength}")
+        print(f"Dosage: {dosage}")
+        print(f"For what: {for_what}")
+        print(f"When: {when}")
+        print(f"Start Date: {start_date}")
+        print(f"Stop Date: {stop_date}")
+        print(f"Special instructions: {special_instructions}")
+
+        choice_add = input("Are the medication details correct? \
+(yes/no): \n").lower()
+        # Validate input
+        if choice_add == "yes":
+            break
+        elif choice_add == "no":
+            print("Please re-enter the medication details \
+or choose 'exit' to leave the program. \n")
+            while True:
+                choice_add2 = input("Enter '1' to re-enter details \
+or '2' to leave the program: \n").lower()
+                if choice_add2 == "1":
+                    break
+                elif choice_add2 == "2":
+                    print("Exiting the program...\n")
+                    sys.exit()
+                else:
+                    print("Invalid input. Try again. \n")
+                    time.sleep(1)
+            continue
+        else:
+            print("Invalid input. Try again. \n")
+            time.sleep(1)
+            continue
+
+    # Update the worksheet with the new medication
+    worksheet.update(f"A{empty_row}", [[name]])
+    worksheet.update(f"B{empty_row}", [[form]])
+    worksheet.update(f"C{empty_row}", [[strength]])
+    worksheet.update(f"D{empty_row}", [[dosage]])
+    worksheet.update(f"E{empty_row}", [[for_what]])
+    worksheet.update(f"F{empty_row}", [[when]])
+    worksheet.update(f"G{empty_row}", [[start_date]])
+    worksheet.update(f"H{empty_row}", [[stop_date]])
+    worksheet.update(f"I{empty_row}", [[special_instructions]])
+
+    # Update the last update date in cell J1
+    today = date.today().strftime("%d-%m-%Y")
+    worksheet.update("J1", f"Last update: {today}")
+
+    print("Medication added successfully. Exiting the program...\n")
+    sys.exit()
 
 
 print("Welcome to your personal medication list program! \n")
