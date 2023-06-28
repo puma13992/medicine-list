@@ -288,5 +288,86 @@ or '2' to leave the program: \n").lower()
     sys.exit()
 
 
+def update_medication(patient_id):
+    """
+    Function to update medication details
+    """
+    worksheet = SPREADSHEET.worksheet(patient_id)
+    data = worksheet.get_all_values()
+
+    if len(data) <= 1:
+        print("The medication list is empty. \
+Returning to main menu.\n")
+        time.sleep(1)
+        old_patient()
+
+    # Display the medication list
+    print("Medication List: \n")
+    for index, row in enumerate(data[1:], start=1):
+        print(f"{index}. {' | '.join(row)}")
+
+    while True:
+        try:
+            row_number = int(input("Enter the row number to update: \n"))
+            if 1 <= row_number <= len(data[1:]):
+                selected_row = data[row_number]
+                print(f"\nSelected Medication: {' | '.join(selected_row)}\n")
+
+                # Ask for updated medication details
+                name = selected_row[0]
+                form = selected_row[1]
+                strength = selected_row[2]
+                dosage = selected_row[3]
+                for_what = selected_row[4]
+                when = selected_row[5]
+                start_date = selected_row[6]
+                stop_date = selected_row[7]
+                special_instructions = selected_row[8]
+
+                print("Leave empty if you do not want to update a field. \n")
+                name = input(f"Name of the medication [{name}]: \n") or name
+                form = input(f"Form of the medication \
+(e.g. tablet, inhaler, dragee) [{form}]: \n") or form
+                strength = input(f"Strength of the medication \
+[{strength}]: \n") or strength
+                dosage = input(f"Dosage of the medication \
+(e.g. 1x per day) [{dosage}]: \n") or dosage
+                for_what = input(f"What is the medicine used for \
+[{for_what}]: \n") or for_what
+                when = input(f"When you take the medication \
+(e.g. evening, if necessary) [{when}]: \n") or when
+                start_date = input(f"Start Date \
+[{start_date}]: \n") or start_date
+                stop_date = input(f"Stop Date [{stop_date}]: \n") or stop_date
+                special_instructions = input(f"Special instructions \
+[{special_instructions}]:\n") or special_instructions
+
+                # Update the worksheet with the updated medication details
+                worksheet.update(f"A{row_number + 1}", [[name]])
+                worksheet.update(f"B{row_number + 1}", [[form]])
+                worksheet.update(f"C{row_number + 1}", [[strength]])
+                worksheet.update(f"D{row_number + 1}", [[dosage]])
+                worksheet.update(f"E{row_number + 1}", [[for_what]])
+                worksheet.update(f"F{row_number + 1}", [[when]])
+                worksheet.update(f"G{row_number + 1}", [[start_date]])
+                worksheet.update(f"H{row_number + 1}", [[stop_date]])
+                worksheet.update(f"I{row_number + 1}\
+", [[special_instructions]])
+
+                # Update the last update date in cell J1
+                today = date.today().strftime("%d-%m-%Y")
+                worksheet.update("J1", f"Last update: {today}")
+
+                print("Medication details updated successfully. \
+Exiting the program... \n")
+                sys.exit()
+
+            # Validate input
+            else:
+                print("Invalid input. Try again.\n")
+        except ValueError:
+            print("Invalid input. Try again.\n")
+
+
 print("Welcome to your personal medication list program! \n")
 welcome_screen()
