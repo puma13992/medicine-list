@@ -1,9 +1,5 @@
 import gspread
 from google.oauth2.service_account import Credentials
-import random
-from datetime import date
-import time
-import sys
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -15,6 +11,7 @@ CREDS = Credentials.from_service_account_file('creds.json')
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SPREADSHEET = GSPREAD_CLIENT.open('medicine-list')
+
 
 def welcome_screen():
     """
@@ -41,6 +38,25 @@ def welcome_screen():
           "you can only set a 'Stop Date' on it, \n"
           "because it`s important to keep an overview "
           "of all medications (current AND past) for your doctors. \n")
+
+
+def new_old_patient():
+    """
+    Function to ask the user if he/she
+    is an old or a new patient
+    """
+    print("Please make a choice:\n"
+          "1 - I`m a new patient\n"
+          "2 - I have already a patient ID.\n"
+          )
+    choice_patient = input("Enter your choice here: \n")
+    # Validate input
+    if choice_patient == "1":
+        print("1")
+    elif choice_patient == "2":
+        print("2")
+    else:
+        print("Invalid choice.\n")
 
 
 print("Welcome to your personal medication list program! \n")
