@@ -1,5 +1,6 @@
 import gspread
 from google.oauth2.service_account import Credentials
+import random
 import time
 
 SCOPE = [
@@ -12,6 +13,9 @@ CREDS = Credentials.from_service_account_file('creds.json')
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SPREADSHEET = GSPREAD_CLIENT.open('medicine-list')
+
+# List for saving the created worksheet names
+created_worksheets = []
 
 
 def welcome_screen():
@@ -62,6 +66,20 @@ def new_old_patient():
         print("Invalid choice.\n")
         time.sleep(2)
         new_old_patient()
+
+
+def create_new_patient():
+    """
+    Function to create a new patient and worksheet
+    based on the "basic" worksheet
+    """
+    source_worksheet = SPREADSHEET.worksheet('basic')
+    new_worksheet_name = f"{random.randint(100000, 999999)}"
+    new_worksheet = source_worksheet.duplicate(new_worksheet_name)
+    new_worksheet.update_title(new_worksheet_name)
+    created_worksheets.append(new_worksheet_name)
+    print(f"A new worksheet with the patient ID '{new_worksheet_name}' \
+has been created for you.")
 
 
 print("Welcome to your personal medication list program! \n")
