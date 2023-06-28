@@ -2,6 +2,7 @@ import gspread
 from google.oauth2.service_account import Credentials
 import random
 import time
+import sys
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -108,7 +109,7 @@ def old_patient():
         choice_old_patient = input("Enter your choice here: \n")
         # Validate input
         if choice_old_patient == "1":
-            print("show")
+            show_list(patient_id)
         elif choice_old_patient == "2":
             print("add")
         elif choice_old_patient == "3":
@@ -121,6 +122,79 @@ def old_patient():
         time.sleep(1)
         print("Invalid choice. Returning to input ID. \n")
         old_patient()
+
+
+def show_list(patient_id):
+    """
+    Function to show the whole medication list
+    """
+    worksheet = SPREADSHEET.worksheet(patient_id)
+    data = worksheet.get_all_values()
+
+    if len(data) > 1 or any(row for row in data[1:]):
+        for row in data[1:]:
+            name = row[0]
+            form = row[1]
+            strength = row[2]
+            dosage = row[3]
+            for_what = row[4]
+            when = row[5]
+            start_date = row[6]
+            stop_date = row[7]
+            special_instructions = row[8]
+
+            print(f"Name: {name}")
+            print(f"Form: {form}")
+            print(f"Strength: {strength}")
+            print(f"Dosage: {dosage}")
+            print(f"For what: {for_what}")
+            print(f"When: {when}")
+            print(f"Start Date: {start_date}")
+            print(f"Stop Date: {stop_date}")
+            print(f"Special instructions: {special_instructions}")
+            print()
+
+        print("Here it is. If you want further: Please make a choice: \n")
+        time.sleep(1)
+        print("1 - Add a medication")
+        print("2 - Update a medication")
+        print("3 - Exit\n")
+        choice = input("Enter your choice here: \n")
+
+        # Validate input
+        if choice == "1":
+            print("add")
+        elif choice == "2":
+            print("update")
+        elif choice == "3":
+            print("Exiting the program. \n")
+            sys.exit()
+        else:
+            print("Invalid choice. Returning to overview.\n")
+            time.sleep(1)
+            show_list(patient_id)
+    else:
+        print("The worksheet is empty.\n")
+
+    while True:
+        time.sleep(1)
+        print("Please make a choice:\n")
+        print("1 - Add Medication")
+        print("2 - Exit Program\n")
+        time.sleep(2)
+        choice = input("Enter your choice: \n")
+
+        # Validate input
+        if choice == "1":
+            print("add")
+            break
+        elif choice == "2":
+            print("Exiting the program...\n")
+            sys.exit()
+        else:
+            print("Invalid choice. Please enter a valid option.\n")
+            time.sleep(1)
+            continue
 
 
 print("Welcome to your personal medication list program! \n")
