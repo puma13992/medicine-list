@@ -1,5 +1,6 @@
 import gspread
 from google.oauth2.service_account import Credentials
+import time
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -38,6 +39,8 @@ def welcome_screen():
           "you can only set a 'Stop Date' on it, \n"
           "because it`s important to keep an overview "
           "of all medications (current AND past) for your doctors. \n")
+    time.sleep(3)
+    new_old_patient()       
 
 
 def new_old_patient():
