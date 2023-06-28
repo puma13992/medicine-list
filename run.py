@@ -61,7 +61,7 @@ def new_old_patient():
     if choice_patient == "1":
         print("1")
     elif choice_patient == "2":
-        print("2")
+        old_patient()
     else:
         print("Invalid choice.\n")
         time.sleep(2)
@@ -80,6 +80,47 @@ def create_new_patient():
     created_worksheets.append(new_worksheet_name)
     print(f"A new worksheet with the patient ID '{new_worksheet_name}' \
 has been created for you.")
+    old_patient()
+
+
+def old_patient():
+    """
+    Function for old patients
+    to show or update their medication list
+    """
+    patient_id = input("Please type in your patient ID \
+(only numbers): \n")
+
+    worksheets = SPREADSHEET.worksheets()
+    worksheet_exists = False
+    for worksheet in worksheets:
+        if worksheet.title == patient_id:
+            worksheet_exists = True
+            break
+
+    if worksheet_exists:
+        print("Please make a choice:\n"
+              "1 - I want to see my medication list.\n"
+              "2 - I want to add a medication.\n"
+              "3 - I want to update an existing medication. \n"
+              )
+        time.sleep(1)
+        choice_old_patient = input("Enter your choice here: \n")
+        # Validate input
+        if choice_old_patient == "1":
+            print("show")
+        elif choice_old_patient == "2":
+            print("add")
+        elif choice_old_patient == "3":
+            print("update")
+        else:
+            print("Invalid choice. Returning to input ID. \n")
+            old_patient()
+    else:
+        print(f"The worksheet '{patient_id}' does not exist.")
+        time.sleep(1)
+        print("Invalid choice. Returning to input ID. \n")
+        old_patient()
 
 
 print("Welcome to your personal medication list program! \n")
