@@ -46,7 +46,7 @@ def welcome_screen():
           "because it`s important to keep an overview "
           "of all medications (current AND past) for your doctors. \n")
     time.sleep(3)
-    new_old_patient()       
+    new_old_patient()  
 
 
 def new_old_patient():
@@ -61,7 +61,7 @@ def new_old_patient():
     choice_patient = input("Enter your choice here: \n")
     # Validate input
     if choice_patient == "1":
-        print("1")
+        create_new_patient()
     elif choice_patient == "2":
         old_patient()
     else:
