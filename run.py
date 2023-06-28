@@ -60,6 +60,8 @@ def new_old_patient():
         print("2")
     else:
         print("Invalid choice.\n")
+        time.sleep(2)
+        new_old_patient()
 
 
 print("Welcome to your personal medication list program! \n")
