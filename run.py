@@ -46,7 +46,7 @@ def welcome_screen():
           "because it`s important to keep an overview "
           "of all medications (current AND past) for your doctors. \n")
     time.sleep(3)
-    new_old_patient()  
+    new_old_patient()
 
 
 def new_old_patient():
@@ -112,9 +112,9 @@ def old_patient():
         if choice_old_patient == "1":
             show_list(patient_id)
         elif choice_old_patient == "2":
-            print("add")
+            add_medication(patient_id)
         elif choice_old_patient == "3":
-            print("update")
+            update_medication(patient_id)
         else:
             print("Invalid choice. Returning to input ID. \n")
             old_patient()
@@ -164,9 +164,9 @@ def show_list(patient_id):
 
         # Validate input
         if choice == "1":
-            print("add")
+            add_medication(patient_id)
         elif choice == "2":
-            print("update")
+            update_medication(patient_id)
         elif choice == "3":
             print("Exiting the program. \n")
             sys.exit()
@@ -187,7 +187,7 @@ def show_list(patient_id):
 
         # Validate input
         if choice == "1":
-            print("add")
+            add_medication(patient_id)
             break
         elif choice == "2":
             print("Exiting the program...\n")
