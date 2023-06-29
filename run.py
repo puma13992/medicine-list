@@ -37,7 +37,7 @@ def welcome_screen():
           "In this programme you can manage your medications.\n"
           "To view a sample medication list, you can use "
           "the ID '123456' below.\n"
-          "In this programme you can create a new medication list,\n "
+          "In this programme you can create a new medication list,\n"
           "view and manage your existing list. \n"
           "You can update medications or add new medications.\n"
           "It`s not possible to delete medications; "
