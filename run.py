@@ -38,13 +38,13 @@ def welcome_screen():
           "In this programme you can manage your medications.\n"
           "To view a sample medication list, you can use "
           "the ID '123456' below.\n"
-          "In this programme you can create a new medication list, "
+          "In this programme you can create a new medication list,\n "
           "view and manage your existing list. \n"
           "You can update medications or add new medications.\n"
           "It`s not possible to delete medications; "
           "you can only set a 'Stop Date' on it, \n"
           "because it`s important to keep an overview "
-          "of all medications (current AND past) for your doctors. \n")
+          "of all medications \n(current AND past) for your doctors. \n")
     time.sleep(3)
     new_old_patient()
 
@@ -226,7 +226,7 @@ def add_medication(patient_id):
         # Validate input
         if not (name.strip() and form.strip()
                 and for_what.strip() and when.strip() and start_date.strip()):
-            print("Invalid input. All fields must be filled. "
+            print("Invalid input. All fields must be filled. \n"
                   "Only 'Stop Date' and 'Special instructions' "
                   "can be empty.\n")
             time.sleep(1)
