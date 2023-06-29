@@ -33,7 +33,7 @@ def welcome_screen():
             print("Invalid input. Please enter a valid name "
                   "(only letters allowed).\n")
 
-    print(f"Hello, {user_name}! Nice to meet you."
+    print(f"Hello, {user_name}! Nice to meet you.\n"
           "In this programme you can manage your medications.\n"
           "To view a sample medication list, you can use "
           "the ID '123456' below.\n"
@@ -158,7 +158,7 @@ def show_list(patient_id):
         time.sleep(1)
         print("1 - Add a medication")
         print("2 - Update a medication")
-        print("3 - Exit\n")
+        print("3 - Return to main menu\n")
         choice = input("Enter your choice here: \n")
 
         # Validate input
@@ -180,7 +180,7 @@ def show_list(patient_id):
         time.sleep(1)
         print("Please make a choice:\n")
         print("1 - Add Medication")
-        print("2 - Exit Program\n")
+        print("2 - Return to main menu\n")
         time.sleep(2)
         choice = input("Enter your choice: \n")
 
@@ -250,7 +250,7 @@ def add_medication(patient_id):
             break
         elif choice_add == "no":
             print("Please re-enter the medication details \
-or choose 'exit' to return to the main overview. \n")
+or choose 'return' to return\n to the main overview. \n")
             while True:
                 choice_add2 = input("Enter '1' to re-enter details \
 or '2' to return to the main overview: \n").lower()
