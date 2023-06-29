@@ -3,7 +3,6 @@ from google.oauth2.service_account import Credentials
 import random
 from datetime import date
 import time
-import sys
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -168,8 +167,8 @@ def show_list(patient_id):
         elif choice == "2":
             update_medication(patient_id)
         elif choice == "3":
-            print("Exiting the program. \n")
-            sys.exit()
+            print("Returning to overview. \n")
+            welcome_screen()
         else:
             print("Invalid choice. Returning to overview.\n")
             time.sleep(1)
@@ -190,8 +189,8 @@ def show_list(patient_id):
             add_medication(patient_id)
             break
         elif choice == "2":
-            print("Exiting the program...\n")
-            sys.exit()
+            print("Returning to overview.\n")
+            welcome_screen()
         else:
             print("Invalid choice. Please enter a valid option.\n")
             time.sleep(1)
@@ -251,15 +250,15 @@ def add_medication(patient_id):
             break
         elif choice_add == "no":
             print("Please re-enter the medication details \
-or choose 'exit' to leave the program. \n")
+or choose 'exit' to return to the main overview. \n")
             while True:
                 choice_add2 = input("Enter '1' to re-enter details \
-or '2' to leave the program: \n").lower()
+or '2' to return to the main overview: \n").lower()
                 if choice_add2 == "1":
                     break
                 elif choice_add2 == "2":
-                    print("Exiting the program...\n")
-                    sys.exit()
+                    print("Returning to overview.\n")
+                    welcome_screen()
                 else:
                     print("Invalid input. Try again. \n")
                     time.sleep(1)
@@ -284,8 +283,8 @@ or '2' to leave the program: \n").lower()
     today = date.today().strftime("%d-%m-%Y")
     worksheet.update("J1", f"Last update: {today}")
 
-    print("Medication added successfully. Exiting the program...\n")
-    sys.exit()
+    print("Medication added successfully. Returning to overview. \n")
+    welcome_screen()
 
 
 def update_medication(patient_id):
@@ -359,8 +358,8 @@ Returning to main menu.\n")
                 worksheet.update("J1", f"Last update: {today}")
 
                 print("Medication details updated successfully. \
-Exiting the program... \n")
-                sys.exit()
+Returning to overview. \n")
+                welcome_screen()
 
             # Validate input
             else:
