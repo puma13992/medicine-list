@@ -368,5 +368,5 @@ Returning to overview. \n")
             print("Invalid input. Try again.\n")
 
 
-print("Welcome to your personal medication list program! \n")
+print("Welcome to your personal medication list programme! \n")
 welcome_screen()
