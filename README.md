@@ -34,3 +34,20 @@ This is important to keep an overview of all medications (current AND past) for 
   - The choice is then requested again.
   ![Introduction](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/welcome-screen-valid-name.JPG)
   ![Invalid choices](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/invalid-choice-welcome.JPG)
+
+- __New patient__
+  - When the user selects the new patient ID, the programme generates a new worksheet with a randomised ID.
+  - The programme then asks the user to type the ID. The programme also asks this of users with a known ID.
+  ![New patient](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/new-worksheet.JPG)
+
+- __Old patient__
+  - If the user chooses that they already have a patient ID, the programme will ask them to type this in.
+  - If the patient ID input is not valid, a validation message appears and informing the user that his/her input is not valid.
+  - The patient ID input is then requested again.
+  - If the patient ID input is valid, the user is given three options: show list, add medications, update an existing mediaction.
+  ![Invalid patient ID](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/invalid-patient-ID.JPG)
+  ![Valid patient ID](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/choice-existing-list.JPG)
+  - If the input for one of the three options is not valid after that, a validation message appears and informing the user that his/her input is not valid.
+  - The three options input is then requested again.
+  ![Invalid patient ID](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/invalid-choice-after-patient-id.JPG)
+  - If the input is valid, the user goes further to show list, add a medication or update an existing medication.
