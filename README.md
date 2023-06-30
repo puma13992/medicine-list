@@ -1,31 +1,19 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Personal Medication List Programme
 
-Welcome Sarah Topfstädt,
+This programme is intended to view a sample medication list. 
+This programme came into being because there are still paper lists for medication intake in Germany, 
+which are often not up to date or going to lose. The programme is intended to remedy this situation 
+and make it possible to make timely entries both on the patient's side and on the doctor's side 
+and to make the digital list accessible to emergency services in case of an emergency.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+## How to use
+As an example, the patient ID you can use  the ID '123456'. 
+Otherwise, the programme creates a new patient ID, if you want it.
+You can create a new medication list, view and manage your existing list. 
+You can update medications or add new medications.
+It`s not possible to delete medications; you can only set a 'Stop Date' on it.
+This is important to keep an overview of all medications (current AND past) for your (potential) doctors.
 
-## Reminders
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+![Medication List Programme](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/responsive-medicine-list.JPG)
 
-## Creating the Heroku app
-
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
