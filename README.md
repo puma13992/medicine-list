@@ -17,3 +17,20 @@ This is important to keep an overview of all medications (current AND past) for 
 
 ![Medication List Programme](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/responsive-medicine-list.JPG)
 
+## Features
+
+### Existing features
+
+- __Welcome Screen__
+  - The first screen shows the name of the programme and asks the user to type his/her name.
+  - If a name is not entered or if the user only types in numbers, a validation message appears and
+  informing the user that his/her input is not valid.
+  - The name is then requested again.
+  ![Programme name with input](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/welcome-name.JPG)
+  ![Invalid username input](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/invalid-name.JPG)
+  - Once a name is entered, the programme move to the introduction.
+  - The user is asked whether he already has a patient ID or needs a new one.
+  - If no choice is not valid, a validation message appears and informing the user that his/her input is not valid.
+  - The choice is then requested again.
+  ![Introduction](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/welcome-screen-valid-name.JPG)
+  ![Invalid choices](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/invalid-choice-welcome.JPG)
