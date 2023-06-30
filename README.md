@@ -45,7 +45,7 @@ This is important to keep an overview of all medications (current AND past) for 
   - If the patient ID input is not valid, a validation message appears and informing the user that his/her input is not valid.
   - The patient ID input is then requested again.
   - If the patient ID input is valid, the user is given three options: show list, add medications, update an existing mediaction.
-  ![Invalid patient ID](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/invalid-patient-ID.JPG)
+  ![Invalid patient ID](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/invalid-patient-id.JPG)
   ![Valid patient ID](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/choice-existing-list.JPG)
   - If the input for one of the three options is not valid after that, a validation message appears and informing the user that his/her input is not valid.
   - The three options input is then requested again.
