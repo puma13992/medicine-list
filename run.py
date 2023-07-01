@@ -296,7 +296,7 @@ def update_medication(patient_id):
 
     if len(data) <= 1:
         print("The medication list is empty. \
-Returning to main menu.\n")
+Returning to input ID.\n")
         time.sleep(1)
         old_patient()
 
