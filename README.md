@@ -19,7 +19,9 @@ This is important to keep an overview of all medications (current AND past) for 
 
 ## Features
 
+
 ### Existing features
+
 
 - __Welcome Screen__
   - The first screen shows the name of the programme and asks the user to type his/her name.
@@ -49,6 +51,7 @@ This is important to keep an overview of all medications (current AND past) for 
 
   ![New patient](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/new-worksheet.JPG)
 
+
 - __Old patient__
   - If the user chooses that they already have a patient ID, the programme will ask them to type this in.
   - If the patient ID input is not valid, a validation message appears and informing the user that his/her input is not valid.
@@ -68,3 +71,26 @@ This is important to keep an overview of all medications (current AND past) for 
 
 
   - If the input is valid, the user goes further to show list, add a medication or update an existing medication.
+
+
+- __Show list__
+  - If the user chooses to display the list, there are two options: Either the list is displayed or the user receives a message that the list is empty. 
+  - If the list is empty, there are two options: add medications or return to the main menu.
+  - If the input for one of the two options is not valid, a validation message appears and informing the user that his/her input is not valid.
+  - The two options input is then requested again.
+
+
+  ![Empty list](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/show-list-empty.JPG)
+  ![Empty list invalid chocie](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/show-list-empty-invalid-choice.JPG)
+
+  - If the list is not empty, the programme shows the list of medications.
+  - After that the user gets three options: add a medication, update a medication or return to the main menu.
+  - If the input for one of the three options is not valid, a validation message appears and informing the user that his/her input is not valid.
+  - The three options input is then requested again.
+
+  ![Show list with three options](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/show-list-with-choices.JPG)
+  ![Empty list invalid chocie](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/show-list-with-invalid-choice.JPG)
+
+  - With both options, the 'return to the main menu' option brings up the initial screen again with the input of the name.
+
+  ![Show list return to main menu](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/show-list-return.JPG)
