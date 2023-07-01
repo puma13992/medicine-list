@@ -19,9 +19,7 @@ This is important to keep an overview of all medications (current AND past) for 
 
 ## Features
 
-
 ### Existing features
-
 
 - __Welcome Screen__
   - The first screen shows the name of the programme and asks the user to type his/her name.
@@ -153,4 +151,12 @@ This is important to keep an overview of all medications (current AND past) for 
   - If the user successfully adds or updates a medication, the date in the row 'J1' in the worksheet updates automatically. 
 
   ![Worksheet date](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/gspread-list-after-add.JPG)
+
+### Process Flow
+
+- Below is a flow chart to demonstrate the actions that take place while using the programme:
+
+  ![Proccess flow](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/flowchart.drawio-medicine.jpg)
+
+
   
