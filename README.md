@@ -97,7 +97,7 @@ This is important to keep an overview of all medications (current AND past) for 
 
 
   - __Add medication__
-  - The programme asks the user to enter the individual details: name of the medication, form of the medication, strength of the medication, dosage of the medication, what is the medicine used for, when you take it, start date, stop date and special instructions. Only the stop date and the special instructions can be leave empty.
+  - If the user chooses to add a medication: The programme asks the user to enter the individual details: name of the medication, form of the medication, strength of the medication, dosage of the medication, what is the medicine used for, when you take it, start date, stop date and special instructions. Only the stop date and the special instructions can be leave empty.
   - If other fields are empty, a validation message appears and informing the user that his/her input is not valid.
   - The add medication input is then requested again.
 
@@ -118,7 +118,7 @@ This is important to keep an overview of all medications (current AND past) for 
 
   - If the user doesn`t confirm the medication entry, he/she gets two options: re-entry the medication details or return to the main menu.
   - If the input for one of the two options is not valid, a validation message appears and informing the user that his/her input is not valid.
-  - The two options input then requested again.
+  - The two options input is then requested again.
 
   ![Add medication no confirm, invalid choice](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/add-medication-not-correct.JPG)
 
@@ -126,3 +126,26 @@ This is important to keep an overview of all medications (current AND past) for 
   - If the user selects 'return to the main menu', they will be returned to the initial screen with the input of the name.
 
   ![Add medication return](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/add-medication-not-correct-return.JPG)
+
+
+- __Update medication__
+  - If the user chooses to update an existing medication: The user receives an overview of the existing medicines in the list.
+  - The user can select the line that he/she wants to update.
+
+  ![Update medication](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/update-medications.JPG)
+
+  - If the input for the row is not valid, a validation message appears and informing the user that his/her input is not valid.
+  - The row input is then requested again.
+
+  ![Update medication invalid choice](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/update-medications-row-incorrect.JPG)
+
+  - If the input for the row is valid, the user can update his/her medication.
+  - After the input of the medication details, a message appears that the medication details updated succesfully and the programme brings the user back to the main menu.
+
+  ![Update medication valid choice](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/update-medications-correct.JPG)
+
+  - If the list is empty, the programme brings the user back to the patient ID input.
+
+  ![Update medication empty list](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/update-empty-worksheet.JPG)
+  
+  
