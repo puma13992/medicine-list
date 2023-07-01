@@ -148,4 +148,9 @@ This is important to keep an overview of all medications (current AND past) for 
 
   ![Update medication empty list](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/update-empty-worksheet.JPG)
   
+
+  - __Worksheet update__
+  - If the user successfully adds or updates a medication, the date in the row 'J1' in the worksheet updates automatically. 
+
+  ![Worksheet date](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/gspread-list-after-add.JPG)
   
