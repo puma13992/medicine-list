@@ -94,3 +94,35 @@ This is important to keep an overview of all medications (current AND past) for 
   - With both options, the 'return to the main menu' option brings up the initial screen again with the input of the name.
 
   ![Show list return to main menu](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/show-list-return.JPG)
+
+
+  - __Add medication__
+  - The programme asks the user to enter the individual details: name of the medication, form of the medication, strength of the medication, dosage of the medication, what is the medicine used for, when you take it, start date, stop date and special instructions. Only the stop date and the special instructions can be leave empty.
+  - If other fields are empty, a validation message appears and informing the user that his/her input is not valid.
+  - The add medication input is then requested again.
+
+  ![Add medication with empty fields](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/add-medication-empty-input.JPG)
+
+  - After entering the data, the new medication appears and the user is asked whether the details entered are correct.
+
+  ![Add medication correctly](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/add-medication.JPG)
+
+  - If the input for one of the two options is not valid, a validation message appears and informing the user that his/her input is not valid.
+  - The add medication input then appears again.
+
+  ![Add medication invalid choice](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/add-medication-invalid.JPG)
+
+  - If the user confirms the medication entry, the medication is added to the list and the user is taken back to the main menu.
+
+  ![Add medication confirm](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/add-medication-correct.JPG)
+
+  - If the user doesn`t confirm the medication entry, he/she gets two options: re-entry the medication details or return to the main menu.
+  - If the input for one of the two options is not valid, a validation message appears and informing the user that his/her input is not valid.
+  - The two options input then requested again.
+
+  ![Add medication no confirm, invalid choice](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/add-medication-not-correct.JPG)
+
+  - If the user chooses to re-enter the medication, they will be returned to this input.
+  - If the user selects 'return to the main menu', they will be returned to the initial screen with the input of the name.
+
+  ![Add medication return](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/add-medication-not-correct-return.JPG)
