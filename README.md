@@ -17,6 +17,23 @@ This is important to keep an overview of all medications (current AND past) for 
 
 ![Medication List Programme](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/responsive-medicine-list.JPG)
 
+## CONTENTS
+
+* [Introduction](#personal-medication-list-programme)
+* [How to use](#how-to-use)
+* [Features](#features)
+  * [Existing features](#existing-features)
+  * [Proccess flow](#process-flow)
+  * [Future features](#future-features)
+* [Testing](#testing)
+    * [Validator Testing](#validator-testing)
+    * [Bugs](#remaining-bugs)
+* [Technologies Used](#technologies-used)   
+    *  [Languages Used](#languages-used)
+    *  [Frameworks, Libraries and Programs Used](#frameworks---libraries---programs-used)
+* [Deployment](#deployment)
+* [Credits](#credits)
+
 ## Features
 
 ### Existing features
@@ -187,6 +204,7 @@ The W3C Validator, Jigsaw W3 Validator and PEP8 Validator from Code Institute we
 
   ![PEP8 Validator](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/pep8-validator.JPG)
 
+
 ### Remaining Bugs
 
 - No bugs remaining 
@@ -228,3 +246,5 @@ The project was deployed on Heroku using the following method:
 - Connect to Github and link to repo
 - Enable Automatic Deploys and deploy manually
 - Click on Deploy.
+
+## Credits
