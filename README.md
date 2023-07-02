@@ -14,6 +14,8 @@ You can update medications or add new medications.
 It`s not possible to delete medications; you can only set a 'Stop Date' on it.
 This is important to keep an overview of all medications (current AND past) for your (potential) doctors.
 
+The live website on Heroku can be accessed at the following link: [View my Live Website on Heroku here](https://medicine-list-69c51fcaab18.herokuapp.com/)
+
 
 ![Medication List Programme](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/responsive-medicine-list.JPG)
 
