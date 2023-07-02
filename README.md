@@ -213,3 +213,18 @@ The W3C Validator, Jigsaw W3 Validator and PEP8 Validator from Code Institute we
 - [WC3 Validator](https://validator.w3.org/), [Jigsaw W3 Validator](https://jigsaw.w3.org/css-validator/) and [PEP8](https://pep8ci.herokuapp.com/) were all used to validate the website.
 
 
+## Deployment
+
+The project was deployed on Heroku using the following method:
+
+- Add dependencies in GitPod to requirements.txt file with command "pip3 freeze > requirements.txt"
+- Commit and push to GitHub as usual
+- Go to the Heroku Dashboard
+- Click "Create new app"
+- Name app and select location
+- Add Config Vars for Creds and Port in Settings tab
+- Add the buildbacks to Python and NodeJS in that order.
+- Select appropriate deployment method e.g. GitHub
+- Connect to Github and link to repo
+- Enable Automatic Deploys and deploy manually
+- Click on Deploy.
