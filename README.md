@@ -192,3 +192,24 @@ The W3C Validator, Jigsaw W3 Validator and PEP8 Validator from Code Institute we
 - No bugs remaining 
 
 
+## Technologies used
+
+### Languages used
+
+- HTML5: Provides the content and structure 
+- CSS: Provides the styling 
+- Python: Provides the functionality 
+
+### Frameworks - Libraries - Programs Used
+
+- [Git](https://git-scm.com/)
+  - Git was used for version control by utilizing the Gitpod terminal to commit to Git and push to GitHub.
+- [Github](https://github.com/)
+  - GitHub was used to store the project's code after being pushed from Git.
+- [Am I Responsive](http://ami.responsivedesign.is/) 
+    - Am I responsive was used to create the multi-device mock-up you can see at the start of this README.md file.
+- [Favicon.io](https://favicon.io/)
+    - Favicon.io was used for making the site favicon.
+- [WC3 Validator](https://validator.w3.org/), [Jigsaw W3 Validator](https://jigsaw.w3.org/css-validator/) and [PEP8](https://pep8ci.herokuapp.com/) were all used to validate the website.
+
+
