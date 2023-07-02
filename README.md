@@ -164,3 +164,24 @@ This is important to keep an overview of all medications (current AND past) for 
 
 - In the future, the programme could perhaps be extended with a suitable frontend, so that it can later be used with a user-friendly interface in doctors' surgeries and hospitals as a digital medication list, which also allows direct input from both: doctor and patient. If necessary, it could also be expanded to include tools such as medication reminders on mobile phones or similar.
 
+
+## Testing
+
+I have manually tested this project by doing the following:
+
+- Given invalid inputs
+- Tested in my local terminal
+- The code was run through the Code Institute Python Linter and showed no errors.
+
+  ![PEP8 Validator](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/pep8-validator.JPG)
+
+The W3C Validator and Jigsaw W3 Validator were used to validate the pages to ensure there were no syntax errors in the project.
+
+### Validator Testing
+
+- __HTML__
+  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmedicine-list-69c51fcaab18.herokuapp.com%2F).
+
+- __CSS__
+  - No errors were found when copy the styles.css in the official Jigsaw validator but when running the link, some issues showed up from the external library Bootstrap [Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmedicine-list-69c51fcaab18.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=de).
+
