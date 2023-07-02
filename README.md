@@ -152,6 +152,7 @@ This is important to keep an overview of all medications (current AND past) for 
 
   ![Worksheet date](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/gspread-list-after-add.JPG)
 
+
 ### Process Flow
 
 - Below is a flow chart to demonstrate the actions that take place while using the programme:
@@ -159,4 +160,7 @@ This is important to keep an overview of all medications (current AND past) for 
   ![Proccess flow](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/flowchart.drawio-medicine.jpg)
 
 
-  
+### Future features
+
+- In the future, the programme could perhaps be extended with a suitable frontend, so that it can later be used with a user-friendly interface in doctors' surgeries and hospitals as a digital medication list, which also allows direct input from both: doctor and patient. If necessary, it could also be expanded to include tools such as medication reminders on mobile phones or similar.
+
