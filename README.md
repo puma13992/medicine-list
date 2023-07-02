@@ -250,3 +250,4 @@ The project was deployed on Heroku using the following method:
 - Click on Deploy.
 
 ## Credits
+- The pictures (background image, favicons) were taken from [Pixabay](https://pixabay.com/).
