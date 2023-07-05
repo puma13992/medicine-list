@@ -7,7 +7,7 @@ and make it possible to make timely entries both on the patient's side and on th
 and to make the digital list accessible to emergency services in case of an emergency.
 
 ## How to use
-As an example, the patient ID you can use  the ID '123456'. 
+As an example, the patient ID you can use is '123456'. 
 Otherwise, the programme creates a new patient ID, if you want it.
 You can create a new medication list, view and manage your existing list. 
 You can update medications or add new medications.
@@ -51,9 +51,9 @@ The live website on Heroku can be accessed at the following link: [View my Live 
   ![Invalid username input](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/invalid-name.JPG)
 
 
-  - Once a name is entered, the programme move to the introduction.
+  - Once a name is entered, the programme moves to the introduction.
   - The user is asked whether he already has a patient ID or needs a new one.
-  - If no choice is not valid, a validation message appears and informing the user that his/her input is not valid.
+  - If the choice is not valid, a validation message appears and informing the user that his/her input is not valid.
   - The choice is then requested again.
 
 
@@ -63,24 +63,24 @@ The live website on Heroku can be accessed at the following link: [View my Live 
 
 - __New patient__
   - When the user selects the new patient ID, the programme generates a new worksheet with a randomised ID.
-  - The programme then asks the user to type the ID. The programme also asks this of users with a known ID.
+  - Then the programme asks the user to type the ID. The programme also asks this to users with a known ID.
 
 
   ![New patient](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/new-worksheet.JPG)
 
 
 - __Old patient__
-  - If the user chooses that they already have a patient ID, the programme will ask them to type this in.
+  - If the user chooses that he/she already has a patient ID, the programme will ask them to type this in.
   - If the patient ID input is not valid, a validation message appears and informing the user that his/her input is not valid.
   - The patient ID input is then requested again.
-  - If the patient ID input is valid, the user is given three options: show list, add medications, update an existing mediaction.
+  - If the patient ID input is valid, the user is given three options: show list, add a medication, update an existing mediaction.
 
 
   ![Invalid patient ID](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/invalid-patient-id.JPG)
   ![Valid patient ID](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/choice-existing-list.JPG)
 
 
-  - If the input for one of the three options is not valid after that, a validation message appears and informing the user that his/her input is not valid.
+  - If the input for one of the three options is not valid, a validation message appears and informing the user that his/her input is not valid.
   - The three options input is then requested again.
 
 
@@ -92,7 +92,7 @@ The live website on Heroku can be accessed at the following link: [View my Live 
 
 - __Show list__
   - If the user chooses to display the list, there are two options: Either the list is displayed or the user receives a message that the list is empty. 
-  - If the list is empty, there are two options: add medications or return to the main menu.
+  - If the list is empty, there are two options: add a medication or return to the main menu.
   - If the input for one of the two options is not valid, a validation message appears and informing the user that his/her input is not valid.
   - The two options input is then requested again.
 
@@ -108,15 +108,15 @@ The live website on Heroku can be accessed at the following link: [View my Live 
   ![Show list with three options](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/show-list-with-choices.JPG)
   ![Empty list invalid chocie](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/show-list-with-invalid-choice.JPG)
 
-  - With both options, the 'return to the main menu' option brings up the initial screen again with the input of the name.
+  - The 'return to the main menu' option brings up the initial screen again with the input of the name.
 
   ![Show list return to main menu](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/show-list-return.JPG)
 
 
   - __Add medication__
-  - If the user chooses to add a medication: The programme asks the user to enter the individual details: name of the medication, form of the medication, strength of the medication, dosage of the medication, what is the medicine used for, when you take it, start date, stop date and special instructions. Only the stop date and the special instructions can be leave empty.
-  - If other fields are empty, a validation message appears and informing the user that his/her input is not valid.
-  - The add medication input is then requested again.
+    - If the user chooses to add a medication: The programme asks the user to enter the individual details: name of the medication, form of the medication, strength of the medication, dosage of the medication, what is the medicine used for, when you take it, start date, stop date and special instructions. Only the stop date and the special instructions can be leave empty.
+    - If other fields are empty, a validation message appears and informing the user that his/her input is not valid.
+    - The add medication input is then requested again.
 
   ![Add medication with empty fields](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/add-medication-empty-input.JPG)
 
@@ -139,8 +139,8 @@ The live website on Heroku can be accessed at the following link: [View my Live 
 
   ![Add medication no confirm, invalid choice](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/add-medication-not-correct.JPG)
 
-  - If the user chooses to re-enter the medication, they will be returned to this input.
-  - If the user selects 'return to the main menu', they will be returned to the initial screen with the input of the name.
+  - If the user chooses to re-enter the medication, he/she will be returned to this input.
+  - If the user selects 'return to the main menu', he/she will be returned to the initial screen with the input of the name.
 
   ![Add medication return](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/add-medication-not-correct-return.JPG)
 
@@ -167,7 +167,7 @@ The live website on Heroku can be accessed at the following link: [View my Live 
   
 
   - __Worksheet update__
-  - If the user successfully adds or updates a medication, the date in the row 'J1' in the worksheet updates automatically. 
+    - If the user successfully adds or updates a medication, the date in the row 'J1' in the worksheet updates automatically. 
 
   ![Worksheet date](https://raw.githubusercontent.com/puma13992/medicine-list/main/views/readme-files/gspread-list-after-add.JPG)
 
@@ -199,7 +199,7 @@ The W3C Validator, Jigsaw W3 Validator and PEP8 Validator from Code Institute we
   - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmedicine-list-69c51fcaab18.herokuapp.com%2F).
 
 - __CSS__
-  - No errors were found when copy the styles.css in the official Jigsaw validator but when running the link, some issues showed up from the external library Bootstrap [Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmedicine-list-69c51fcaab18.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=de).
+  - No errors were returned when passing through the official [Jigsaw W3 Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmedicine-list-69c51fcaab18.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=de).
 
 - __Python__
   - The code was run through the Code Institute Python Linter and showed no errors.
@@ -230,6 +230,8 @@ The W3C Validator, Jigsaw W3 Validator and PEP8 Validator from Code Institute we
     - Am I responsive was used to create the multi-device mock-up you can see at the start of this README.md file.
 - [Favicon.io](https://favicon.io/)
     - Favicon.io was used for making the site favicon.
+- [Draw.io](https://draw.io/)
+    - Draw.io was used for making the flow chart.
 - [WC3 Validator](https://validator.w3.org/), [Jigsaw W3 Validator](https://jigsaw.w3.org/css-validator/) and [PEP8](https://pep8ci.herokuapp.com/) were all used to validate the website.
 
 
